@@ -8,7 +8,7 @@ const connectDB = async () => {
 
   // when using async/await, wrap in a try/catch block
   try {
-    await mongoose.connect(db || "mongodb://ken12345:ken12345@ds149404.mlab.com:49404/heroku_0t7nq6cl", {
+    await mongoose.connect(db || {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
