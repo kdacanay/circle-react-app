@@ -8,7 +8,7 @@ const connectDB = async () => {
 
   // when using async/await, wrap in a try/catch block
   try {
-    await mongoose.connect(db || {
+    await mongoose.connect(db, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
