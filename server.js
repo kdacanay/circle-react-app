@@ -1,7 +1,7 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const path = require('path');
-// const { allowedNodeEnvironmentFlags } = require('process');
+const { allowedNodeEnvironmentFlags } = require('process');
 const app = express();
 
 // Connect database
