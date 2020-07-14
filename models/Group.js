@@ -7,11 +7,12 @@ const GroupSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'users'
   },
-  title: {
+  name: {
     type: String
   },
-  avatar: {
-    type: String
+  title: {
+    type: String,
+    required: true
   },
   date: {
     type: Date,
@@ -22,6 +23,16 @@ const GroupSchema = new Schema({
       user: {
         type: Schema.Types.ObjectId,
         ref: 'users'
+      },
+      name: {
+        type: String
+      },
+      avatar: {
+        type: String
+      },
+      date: {
+        type: Date,
+        default: Date.now
       }
     }
   ],
@@ -30,16 +41,6 @@ const GroupSchema = new Schema({
       user: {
         type: Schema.Types.ObjectId,
         ref: 'posts'
-      },
-      text: {
-        type: String,
-        required: true
-      },
-      name: {
-        type: String
-      },
-      avatar: {
-        type: String
       }
     }
   ]

@@ -6,9 +6,9 @@ const { check, validationResult } = require('express-validator');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 const bcrypt = require('bcryptjs');
-// @ route    GET api/auth
-// @ desc     Test route
-// @ access   Private
+//GET api/auth
+//Test route
+//Private
 
 // using auth makes route a proteced route
 router.get('/', auth, async (req, res) => {
@@ -21,9 +21,9 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
-// @ route    Post api/auth
-// @ desc     Authenticate user / get token
-// @ access   Public
+// Post api/auth
+// Authenticate user / get token
+// Public
 
 router.post('/',
 
