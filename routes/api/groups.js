@@ -155,4 +155,10 @@ router.post(
     }
   }
 );
+
+//PUT api/groups/user/:id/post:id
+//add a post to user in group
+//Private
+
+
 module.exports = router;
