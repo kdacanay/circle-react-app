@@ -30,7 +30,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <div>
       <nav className="navbar bg-dark">
         <h1>
-          <Link to="/">Kuya</Link>
+          <Link to="/"><i className="far fa-user-circle"></i>CIRCLE</Link>
         </h1>
         {!loading && (<Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>)}
       </nav>
