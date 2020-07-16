@@ -2,12 +2,11 @@ const express = require('express');
 const router = express.Router();
 const auth = require('../../middleware/auth');
 
-// const Post = require('../../models/Post');
 const User = require('../../models/User');
 const Group = require('../../models/Group');
 const checkObjectId = require('../../middleware/checkObjectId');
 const { check, validationResult } = require('express-validator');
-const Post = require('../../models/Post');
+// const Post = require('../../models/Post');
 
 
 

@@ -18,7 +18,7 @@ const PostSchema = new Schema({
   },
   group: {
     type: Schema.Types.ObjectId,
-    ref: 'Group'
+    ref: 'group'
   },
   likes: [
     {

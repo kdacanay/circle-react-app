@@ -6,11 +6,13 @@ const { check, validationResult } = require('express-validator');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 const bcrypt = require('bcryptjs');
+
+
 //GET api/auth
 //Test route
 //Private
 
-// using auth makes route a proteced route
+// using auth makes route a protected route
 router.get('/', auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');
