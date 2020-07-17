@@ -1,6 +1,6 @@
 // get profile, create, update, etc
 
-import { GET_PROFILE, PROFILE_ERROR } from "../actions/types";
+import { GET_PROFILE, PROFILE_ERROR, CLEAR_PROFILE, UPDATE_PROFILE } from "../actions/types";
 
 
 // when logging in, get request to retrieve profile for user, also retrieve profile when looking at another user's profile
@@ -20,6 +20,7 @@ export default function (state = initialState, action) {
 
   switch (type) {
     case GET_PROFILE:
+    case UPDATE_PROFILE:
       return {
         ...state,
         profile: payload,
@@ -29,6 +30,12 @@ export default function (state = initialState, action) {
       return {
         ...state,
         error: payload,
+        loading: false
+      };
+    case CLEAR_PROFILE:
+      return {
+        ...state,
+        profile: null,
         loading: false
       };
     default:
