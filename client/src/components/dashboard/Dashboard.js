@@ -15,7 +15,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
 
   useEffect(() => {
     getCurrentProfile();
-  }, []);
+  }, [getCurrentProfile]);
 
 
   // if profile is null and still loading, show spinner
@@ -43,7 +43,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
           </Fragment>
         ) : (
             <Fragment>
-              <p>There is not profile set up. Please create profile.</p>
+              <p>There is no profile set up. Click 'Create Profile' to get started.</p>
               <Link to='/create-profile' className='btn btn-primary my-1'>Create Profile</Link>
             </Fragment>
           )}
