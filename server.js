@@ -22,6 +22,7 @@ app.use('/api/groups', require('./routes/api/groups'));
 if (process.env.NODE_ENV === 'production') {
   // set static folder
   app.use(express.static('client/build'));
+  // serve
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
