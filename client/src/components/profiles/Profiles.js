@@ -17,7 +17,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
     <Fragment>
       {loading ? <Spinner /> : <Fragment>
         <h1 className='large text-primary'>Profiles</h1>
-        <p class='lead'>
+        <p className='lead'>
           <i className='fab fa-connectdevelop'></i>
           Browse and Connect
         </p>
