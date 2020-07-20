@@ -335,7 +335,8 @@ button {
 /* Landing Page */
 .landing {
   position: relative;
-  /* background: url('./img/showcase.jpg') no-repeat center center/cover; */
+  background: url('./image/pexels-photo-221011.webp') no-repeat center
+    center/cover;
   height: 100vh;
 }
 

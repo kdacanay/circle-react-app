@@ -21,3 +21,7 @@ export const DELETE_POST = 'DELETE_POST';
 export const ADD_POST = 'ADD_POST';
 export const ADD_COMMENT = 'ADD_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+export const GET_GROUPS = 'GET_GROUPS';
+export const GROUP_ERROR = 'GROUP_ERROR';
+export const ADD_GROUP = 'ADD_GROUP';
+export const DELETE_GROUP = 'DELETE_GROUP';

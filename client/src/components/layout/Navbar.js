@@ -12,7 +12,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         Friends</Link>
       </li>
       <li>
-        <Link to='/posts'>Posts</Link>
+        <Link to='/groups'>Groups</Link>
       </li>
       <li><Link to="/dashboard">
         <i className="fas fa-user"></i>{' '}
@@ -28,12 +28,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLinks = (
     <ul>
-      <li><Link to="/profiles">
-        See Profiles</Link>
-      </li>
-      <li>
-        <a href="#!">Friends</a>
-      </li>
+      <li><Link to='/about'>About</Link></li>
       <li><Link to="/register">Register</Link></li>
       <li><Link to="/login">Login</Link></li>
     </ul>

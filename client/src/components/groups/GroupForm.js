@@ -1,33 +1,31 @@
-// child component
-
-
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addPost } from '../../actions/post';
+import { addGroup } from '../../actions/group';
 
-const PostForm = ({ addPost }) => {
-  const [text, setText] = useState('');
+const GroupForm = ({ addGroup }) => {
+
+  const [title, setText] = useState('');
 
   return (
-    <div className='post-form'>
+    <div className='group-form' id='creategroup'>
       <div className='bg-primary p'>
-        <h3>Start a Post</h3>
+        <h3>Create A Group</h3>
       </div>
       <form
         className='form my-1'
         onSubmit={e => {
           e.preventDefault();
-          addPost({ text });
+          addGroup({ title });
           setText('');
         }}
       >
         <textarea
           name='text'
           cols='30'
-          rows='5'
-          placeholder='Create a post'
-          value={text}
+          rows='1'
+          placeholder='Create a Group'
+          value={title}
           onChange={e => setText(e.target.value)}
           required
         />
@@ -37,11 +35,8 @@ const PostForm = ({ addPost }) => {
   );
 };
 
-PostForm.propTypes = {
-  addPost: PropTypes.func.isRequired
+GroupForm.propTypes = {
+  addGroup: PropTypes.func.isRequired,
 };
 
-export default connect(
-  null,
-  { addPost }
-)(PostForm);
+export default connect(null, { addGroup })(GroupForm);
