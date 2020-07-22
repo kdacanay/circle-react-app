@@ -19,7 +19,7 @@ router.post(
   [
     auth,
     [
-      check('title', 'Group Title is required').not().isEmpty()
+      check('name', 'name is required').not().isEmpty()
     ]
   ],
   async (req, res) => {
@@ -121,7 +121,8 @@ router.post(
   [
     auth,
     checkObjectId('id'),
-    [check('name', 'name is required').not().isEmpty()]
+    [check('user', 'user is required').not().isEmpty(),
+    check('title', 'title is required').not().isEmpty()]
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -136,8 +137,10 @@ router.post(
       const user = await User.findById(req.user.id).select('-password');
       const group = await Group.findById(req.params.id);
 
+
+
       const groupUser = {
-        text: req.body.text,
+        title: req.body.title,
         name: user.name,
         avatar: user.avatar,
         user: req.user.id
@@ -149,7 +152,7 @@ router.post(
 
       res.json(group.members);
     } catch (err) {
-      console.error(err.message);
+      console.error(err.response);
       res.status(500).send('Server Error');
     }
   }

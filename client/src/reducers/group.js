@@ -2,7 +2,8 @@ import {
   GET_GROUPS,
   GROUP_ERROR,
   ADD_GROUP,
-  DELETE_GROUP
+  DELETE_GROUP,
+  ADD_MEMBER
 } from '../actions/types';
 
 const initialState = {
@@ -26,6 +27,20 @@ export default function (state = initialState, action) {
       return {
         ...state,
         error: payload,
+        loading: false
+      };
+    case DELETE_GROUP:
+      return {
+        ...state,
+        groups: state.groups.filter(group => group._id !== payload),
+        loading: false
+      };
+    case ADD_MEMBER:
+      return {
+        ...state,
+        group: {
+          ...state.group, members: payload
+        },
         loading: false
       };
     case ADD_GROUP:

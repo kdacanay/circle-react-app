@@ -127,19 +127,95 @@ img {
 .my-3 {
   margin: 3rem 0;
 }
-
+/* animation */
 .btn {
   display: inline-block;
   background: var(--light-color);
   color: #333;
-  padding: 0.4rem 1.3rem;
+  /* padding: 0.4rem 1.3rem; */
+  padding: 0.5rem;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   margin-right: 0.5rem;
-  transition: opacity 0.2s ease-in;
-  outline: none;
+  border: 1px solid;
+  padding: 10px;
 }
+
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: 5px 5px 4px #444144;
+}
+
+@-moz-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@-o-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* .x-large {
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.65s cubic-bezier(0.51, 0.04, 0.63, 1.4);
+  transition-property: all;
+  transition-duration: 0.3s;
+  outline: none;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.x-large:hover {
+  border-bottom-left-radius: 70%;
+  border-bottom-right-radius: 70%;
+  border-top-left-radius: 70%;
+  border-top-right-radius: 70%;
+  padding-top: 0.75rem;
+  padding-bottom: 1rem;
+  border-radius: 80%;
+  -webkit-transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+} */
+
+/* end animation */
 
 .badge {
   font-size: 0.8rem;
@@ -207,10 +283,6 @@ img {
   border: #ccc solid 1px;
 }
 
-.btn:hover {
-  opacity: 0.8;
-}
-
 .bg-light,
 .badge-light {
   border: #ccc solid 1px;
@@ -259,11 +331,11 @@ img {
   font-size: 1.2rem;
   border: 1px solid #ccc;
 }
-
+/* 
 .form input[type='submit'],
 button {
   font: inherit;
-}
+} */
 
 .form .social-input {
   display: flex;

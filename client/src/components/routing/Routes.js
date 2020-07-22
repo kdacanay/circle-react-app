@@ -17,6 +17,7 @@ import Post from '../post/Post';
 import NotFound from '../layout/NotFound';
 import About from '../about/About';
 import Groups from '../groups/Groups';
+import GroupPage from '../groups/GroupPage';
 
 
 const Routes = () => {
@@ -37,6 +38,7 @@ const Routes = () => {
         <PrivateRoute exact path='/posts' component={Posts} />
         <PrivateRoute exact path='/posts/:id' component={Post} />
         <PrivateRoute exact path='/groups' component={Groups} />
+        <PrivateRoute exact path='/group-page' component={GroupPage} />
         <Route component={NotFound} />
       </Switch>
     </section>

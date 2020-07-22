@@ -25,3 +25,4 @@ export const GET_GROUPS = 'GET_GROUPS';
 export const GROUP_ERROR = 'GROUP_ERROR';
 export const ADD_GROUP = 'ADD_GROUP';
 export const DELETE_GROUP = 'DELETE_GROUP';
+export const ADD_MEMBER = 'ADD_MEMBER';

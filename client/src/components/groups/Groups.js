@@ -8,11 +8,13 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import { getGroups } from '../../actions/group';
 import GroupItem from './GroupItem';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import GroupForm from './GroupForm';
+import Form from '../email/Form';
 
 
-const Groups = ({ getGroups, group: { groups, loading } }) => {
+
+const Groups = ({ getGroups, groupId, group: { groups, loading } }) => {
 
   useEffect(() => {
     getGroups();
@@ -25,14 +27,19 @@ const Groups = ({ getGroups, group: { groups, loading } }) => {
       <p className="lead">
         Join a Group or{' '}
         <Link to='/groups/#creategroup' className='btn btn-primary'>{' '}Create Your Own</Link>
+     or{' '}
+        <Link to='/groups/#inviteemail' className='btn btn-primary'>{' '}
+        Invite Your Friends or Family!
+      </Link>
       </p>
-
       <div className='groups'>
         {groups.map(group => (
-          <GroupItem key={group._id} group={group} />
+          <GroupItem key={group._id} group={group}
+            groupId={group._id} />
         ))}
       </div>
       <GroupForm />
+      <Form />
     </Fragment>
   );
 };

@@ -14,6 +14,7 @@ const Landing = ({ isAuthenticated }) => {
 
   return (
     <section className="landing">
+
       <div className="dark-overlay">
         <div className="landing-inner">
           <h1 className="x-large"><i className="far fa-user-circle"></i>CIRCLE</h1>
@@ -26,6 +27,7 @@ const Landing = ({ isAuthenticated }) => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };

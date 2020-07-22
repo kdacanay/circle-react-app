@@ -57,14 +57,13 @@ const CreateProfile = ({ createProfile, history }) => {
       <form className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
           <select name="status" value={status} onChange={e => onChange(e)}>
-            <option value="0">* Select Professional Status</option>
-            <option value="Developer">Developer</option>
-            <option value="Junior Developer">Junior Developer</option>
-            <option value="Senior Developer">Senior Developer</option>
-            <option value="Manager">Manager</option>
-            <option value="Student or Learning">Student or Learning</option>
-            <option value="Instructor">Instructor or Teacher</option>
-            <option value="Intern">Intern</option>
+            <option value="0">* Status</option>
+            <option value="employed">Employed</option>
+            <option value="full-time">Full-Time Employee</option>
+            <option value="student or ;learning">Student or Learning</option>
+            <option value="part-time">Part-time Employee</option>
+            <option value="intern">Intern</option>
+            <option value='selfemployed'>Self-Employed</option>
             <option value="Other">Other</option>
           </select>
           <small className="form-text"
@@ -90,10 +89,9 @@ const CreateProfile = ({ createProfile, history }) => {
           >
         </div>
         <div className="form-group">
-          <input type="text" placeholder="* Skills" name="skills" value={skills} onChange={e => onChange(e)} />
+          <input type="text" placeholder="* Interests" name="skills" value={skills} onChange={e => onChange(e)} />
           <small className="form-text"
-          >Please use comma separated values (eg.
-            HTML,CSS,JavaScript,PHP)</small
+          >Tell us your interests, use commas to seperate values</small
           >
         </div>
         <div className="form-group">
