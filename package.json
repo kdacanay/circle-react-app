@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/kdacanay/kuya-react-app#readme",
   "dependencies": {
+    "aws-sdk": "^2.719.0",
     "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.5.0",
@@ -32,8 +33,11 @@
     "jsonwebtoken": "^8.5.1",
     "materialize-css": "^1.0.0-rc.2",
     "mongoose": "^5.9.24",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
     "normalize-url": "^5.0.0",
     "react-bootstrap": "^1.2.2",
+    "react-responsive-carousel": "^3.2.9",
     "react-router-hash-link": "^2.0.0",
     "request": "^2.88.2",
     "thunk": "0.0.1"

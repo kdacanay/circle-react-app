@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import ProfileItem from './ProfileItem';
 import { getProfiles } from '../../actions/profile';
+import { Link } from 'react-router-dom';
 
 
 
@@ -18,10 +19,15 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
       {loading ? <Spinner /> : <Fragment>
         <h1 className='large text-primary'>Friends/Profiles</h1>
         <p className='lead'>
-          <i className='fab fa-connectdevelop'></i>
           Browse and Connect
         </p>
+        <Link to='/groups/#inviteemail' className='btn btn-primary'>{' '}
+        Invite Your Friends or Family to{' '}
+          <i className="far fa-user-circle"></i>CIRCLE
+        </Link>
+        <br />
         <div className='profiles'>
+          <br />
           {profiles.length > 0 ? (
             profiles.map(profile => (
               <ProfileItem key={profile._id} profile={profile} />

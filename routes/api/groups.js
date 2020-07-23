@@ -121,8 +121,8 @@ router.post(
   [
     auth,
     checkObjectId('id'),
-    [check('user', 'user is required').not().isEmpty(),
-    check('title', 'title is required').not().isEmpty()]
+    // [check('user', 'user is required').not().isEmpty(),
+    // check('text', 'text is required').not().isEmpty()]
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -137,10 +137,8 @@ router.post(
       const user = await User.findById(req.user.id).select('-password');
       const group = await Group.findById(req.params.id);
 
-
-
       const groupUser = {
-        title: req.body.title,
+        title: req.body.text,
         name: user.name,
         avatar: user.avatar,
         user: req.user.id

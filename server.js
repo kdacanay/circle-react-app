@@ -17,6 +17,7 @@ app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/posts', require('./routes/api/posts'));
 app.use('/api/groups', require('./routes/api/groups'));
+app.use('/api/image', require('./routes/api/file-upload'));
 
 // serve static assets in production
 if (process.env.NODE_ENV === 'production') {

@@ -11,10 +11,11 @@ import { deleteGroup, addMember } from '../../actions/group';
 
 const GroupItem = ({
   auth,
+  user,
   groupId,
   addMember,
   deleteGroup,
-  group: { _id, title, name, members, user, date },
+  group: { _id, title, name, members, date },
   showActions
 }) => (
 
@@ -22,13 +23,13 @@ const GroupItem = ({
       <div className="group bg-white p-1 my-1">
         <div>
           {/* // link to GroupPage */}
-          <Link to="/group-page">
-            <h2>{title}</h2>
-            <h4>Group Members</h4>
+          <Fragment>
+            <h2 className='text-primary'>{title}</h2>
+            <h4 className='text-primary'>Group Members</h4>
             {members.map((member => (
               <p key={member._id}>{member.name}</p>
             )))}
-          </Link>
+          </Fragment>
         </div>
 
         {showActions && (
@@ -48,6 +49,12 @@ const GroupItem = ({
             > Join This Group{' '}
               <i className="fas fa-user-plus"></i>
             </button>
+            <Link
+              to='/posts'
+              type="button"
+              className="btn btn-primary"
+            > Discussion{' '}
+            </Link>
             {!auth.loading && user === auth.user._id && (
               <button
                 onClick={() => deleteGroup(_id)}
@@ -77,7 +84,8 @@ GroupItem.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth
+  auth: state.auth,
+  user: state.user
 });
 
 export default connect(

@@ -47,10 +47,13 @@ const Groups = ({ getGroups, groupId, group: { groups, loading } }) => {
 Groups.propTypes = {
   getGroups: PropTypes.func.isRequired,
   group: PropTypes.object.isRequired,
+  isAuthenticated: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  group: state.group
+  group: state.group,
+  auth: state.auth
 });
 
 export default connect(mapStateToProps, { getGroups })(Groups);

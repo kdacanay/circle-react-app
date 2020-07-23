@@ -38,7 +38,7 @@ export default class extends React.Component {
     return (
       <form className="test-mailing form my-1" id='inviteemail'>
         <div className='bg-primary p'>
-          <h3>Invite to
+          <h3>Invite to{' '}
             <i className="far fa-user-circle"></i>CIRCLE</h3>
         </div>
         <br />

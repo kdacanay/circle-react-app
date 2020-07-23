@@ -114,4 +114,5 @@ export const addMember = (groupId, formData) => async dispatch => {
       payload: { msg: err.response.statusText, status: err.response.status }
     });
   }
+  window.location.reload();
 };

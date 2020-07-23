@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://ken1234:ken1234@cluster0.tzskj.mongodb.net/<dbname>?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
+  "jwtSecret": "mysecrettoken",
+  "AWS_ACCESS_KEY": "AKIAJRO2MRSWKHW36RIQ",
+  "AWS_SECRET_ACESS": "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"
 }
