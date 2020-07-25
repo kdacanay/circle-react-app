@@ -8,6 +8,10 @@ const normalize = require('normalize-url');
 const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 const Post = require('../../models/Post');
+const profileImgUpload = require('../../services/file-upload');
+const generateGetUrl = require('../../services/file-upload');
+const { data } = require('jquery');
+
 
 
 //GET api/profile/me
@@ -65,7 +69,9 @@ router.post(
       twitter,
       instagram,
       linkedin,
-      facebook
+      facebook,
+      image,
+      imageLocation
     } = req.body;
 
     // build profile object
@@ -78,7 +84,9 @@ router.post(
       skills: Array.isArray(skills)
         ? skills
         : skills.split(',').map((skill) => ' ' + skill.trim()),
-      status
+      status,
+      image,
+      imageLocation
     };
 
     // Build social object and add to profileFields
@@ -325,5 +333,54 @@ router.delete('/education/:exp_id', auth, async (req, res) => {
   }
 
 });
+
+router.post('/profile-img-upload', auth, (req, res) => {
+  profileImgUpload(req, res, async (error) => {
+    try {
+      const profile = await Profile.findOne({ user: req.user.id });
+      // console.log( 'requestOkokok', req.file );
+      // console.log( 'error', error );
+      if (error) {
+        console.log('errors', error);
+        res.json({ error: error });
+      } else {
+        // If File not found
+        if (req.file === undefined) {
+          console.log('Error: No File Selected!');
+          res.json('Error: No File Selected');
+        } else {
+
+          await profile.save();
+          // If Success
+          const imageName = req.file.key;
+          const imageLocation = req.file.location;
+          // Save the file name into database into profile model
+
+          // res.json(profile);
+          res.json({
+            image: imageName,
+            location: imageLocation
+          });
+        }
+      }
+    } catch (err) {
+      console.error(err.message);
+    }
+  });
+});
+
+router.get('/generate-image', (req, res) => {
+
+  const { Key } = req.query;
+
+  generateGetUrl(Key)
+    .then(getUrl => {
+      res.send(getUrl);
+    }).catch(err => {
+      res.send(err);
+    });
+});
+
+
 
 module.exports = router;

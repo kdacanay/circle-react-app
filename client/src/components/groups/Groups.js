@@ -47,7 +47,7 @@ const Groups = ({ getGroups, groupId, group: { groups, loading } }) => {
 Groups.propTypes = {
   getGroups: PropTypes.func.isRequired,
   group: PropTypes.object.isRequired,
-  isAuthenticated: PropTypes.object.isRequired,
+  // isAuthenticated: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired
 };
 

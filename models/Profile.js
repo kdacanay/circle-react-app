@@ -104,7 +104,12 @@ const ProfileSchema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  image: {
+    data: Buffer,
+    contentType: String
   }
+
 });
 
 module.exports = mongoose.model('profile', ProfileSchema);
