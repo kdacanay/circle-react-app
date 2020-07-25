@@ -1,20 +1,24 @@
 // parent component
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <Fragment>
-      <section className='container' >
-        <h1 className='large text-primary text-center'>About{' '}<i className="far fa-user-circle"></i>Circle</h1>
-        <h4 className='lead text-primary text-center'>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text,</h4>
+    <section >
+      <br />
+      <br />
+      <h1 className='large text-primary text-center'>About{' '}<i className="far fa-user-circle"></i>circle</h1>
+      <h4 className='lead text-primary text-center'>Nowadays, the internet is a scary place.  But it wasn't like that over a decade ago.</h4>
 
-        <p className='lead text-center'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet</p>
+      <p className='lead text-center'>Everything you do on the internet is tracked; from the searches on Google to your Twitter posts, to the photos you uploaded on Instagram or Facebook, companies are using your data to cater to your experience (and to make money). None of that happens here at <i className="far fa-user-circle"></i>circle.  You can connect with your family and friends through an email invite and create profiles, create groups on topics, upload photos, make posts and comments, while not worrying about us stealing your data and making an internet presence without you knowing about it. Enjoy your privacy and enjoy using <i className="far fa-user-circle"></i>circle!</p>
+      <div className='buttons'>
+        <Link to='/' className='btn btn-primary text-center'>Return to Landing</Link>
+      </div>
+      <br />
+    </section>
 
-      </section>
-      <Link to='/' className='btn btn-primary'>Return to Landing</Link>
-    </Fragment>
+
 
   );
 };

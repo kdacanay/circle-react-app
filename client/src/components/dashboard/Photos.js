@@ -81,28 +81,34 @@ class Photos extends Component {
   render() {
     return (
       <div>
+        <h1 className='large text-primary' style={{ marginBottom: '0' }}>Photos</h1>
+        {/* For Alert box*/}
+        <div id="oc-alert-container"></div>
         <div className="container">
-          {/* For Alert box*/}
-          <div id="oc-alert-container"></div>
           {/* Single File Upload*/}
-          <div className="card border-light mb-3 mt-5" style={{ boxShadow: '0 5px 10px 2px rgba(195,192,192,.5)' }}>
-            <div className="card-header">
-              <h3 style={{ color: '#555', marginLeft: '12px' }}>Single Image Upload</h3>
+          <Card className="card  border-light mb-3 mt-5 text-center" style={{ boxShadow: '0 5px 10px 2px rgba(195,192,192,.5)' }}>
+            <div className="card-header text-center">
+              <h3 style={{ color: '#b4d263', marginLeft: '12px' }}>Photo Upload</h3>
               <p className="text-muted" style={{ marginLeft: '12px' }}>Upload Size: 250px x 250px ( Max 2MB )</p>
             </div>
             <div className="card-body">
               <p className="card-text">Please upload an image</p>
-              <input type="file" onChange={this.singleFileChangedHandler} />
+              <input style={{ marginRight: '0', display: 'inline-block', overFlow: 'hidden' }} className='btn btn-primary' type="file" onChange={this.singleFileChangedHandler} />
               <div className="mt-5">
-                <button className="btn btn-info" onClick={this.singleFileUploadHandler}>Upload!</button>
+                <br />
+                <button className="btn btn-info btn-primary" onClick={this.singleFileUploadHandler}>Upload!</button>
               </div>
             </div>
-            <Card className='container card' style={{ width: '250px' }}>
-              <img src='https://circlereactapp.s3.us-east-2.amazonaws.com/IMG_0015-1595643813379.jpg' />
-            </Card>
-          </div>
+          </Card>
         </div>
-      </div>
+        <div className='container' style={{ display: 'grid' }}>
+          <Card className='card' style={{ width: '250px' }}>
+            <img className='responsive-img' alt='new' src='https://circlereactapp.s3.us-east-2.amazonaws.com/IMG_0015-1595643813379.jpg' />
+            <img alt='new' src='https://circlereactapp.s3.us-east-2.amazonaws.com/IMG_0047%281%29-1595689980850.JPG' />
+
+          </Card>
+        </div>
+      </div >
 
     );
   }

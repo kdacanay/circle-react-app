@@ -9,7 +9,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li><Link to="/profiles">
-        Friends</Link>
+        Connect</Link>
       </li>
       <li>
         <Link to='/groups'>Groups</Link>

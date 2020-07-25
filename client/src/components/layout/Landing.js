@@ -19,7 +19,7 @@ const Landing = ({ isAuthenticated }) => {
         <div className="landing-inner">
           <h1 className="x-large"><i className="far fa-user-circle"></i>CIRCLE</h1>
           <p className="lead">
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words wh
+            The Internet's Private Social Media Platform
           </p>
           <div className="buttons">
             <Link to="/register" className="btn btn-primary">Sign Up</Link>

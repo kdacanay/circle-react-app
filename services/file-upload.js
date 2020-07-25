@@ -2,14 +2,15 @@ const aws = require('aws-sdk');
 const multer = require('multer');
 const multerS3 = require('multer-s3');
 const path = require('path');
+require('dotenv').config();
 // const url = require('url');
 
 // const config = require('../config/default.json');
 
-aws.config.update({
-  secretAccessKey: "zgtxI4bT+9awWXPELRQx1jrEG4Lhz+vx6mqBM9wn",
-  accessKeyId: "AKIAJKKYEB5WUUKS6MZQ",
-  region: 'us-east-2'
+aws.config = new aws.Config({
+  accessKeyId: process.env.S3_KEY,
+  secretAccessKey: process.env.S3_SECRET,
+  region: process.env.BUCKET_REGION
 });
 
 const s3 = new aws.S3();
