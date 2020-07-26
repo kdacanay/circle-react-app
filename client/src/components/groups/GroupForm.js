@@ -29,7 +29,7 @@ const GroupForm = ({ addGroup }) => {
           onChange={e => setText(e.target.value)}
           required
         />
-        <input type='submit' className='btn btn-primary my-1' value='Submit' />
+        <input type='submit' className='btn btn-primary my-1' value='Submit' style={{ position: 'relative' }} />
       </form>
     </div>
   );

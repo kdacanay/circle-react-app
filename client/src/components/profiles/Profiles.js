@@ -21,7 +21,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <p className='lead'>
           Browse and Connect
         </p>
-        <Link to='/groups/#inviteemail' className='btn btn-primary'>{' '}
+        <Link to='/groups/#inviteemail' className='btn btn-primary' style={{ position: 'relative' }}>{' '}
         Invite Your Friends or Family to{' '}
           <i className="far fa-user-circle"></i>CIRCLE
         </Link>

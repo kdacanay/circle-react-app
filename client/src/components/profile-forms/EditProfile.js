@@ -117,10 +117,10 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
         </div>
 
         <div className="my-2">
-          <button onClick={() => toggleSocialInputs(!displaySocialInputs)} type="button" className="btn btn-light">
+          <Link onClick={() => toggleSocialInputs(!displaySocialInputs)} type="button" className="btn btn-primary" style={{ position: 'relative' }}>
             Add Social Network Links
-          </button>
-          <span>Optional</span>
+          </Link>
+          <span style={{ position: 'absolute' }}>Optional</span>
         </div>
 
         {displaySocialInputs && <Fragment>
@@ -152,8 +152,8 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
 
         </Fragment>}
 
-        <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">Go Back</Link>
+        <div type="submit" className="btn btn-primary" style={{ position: 'relative' }}>Submit</div>
+        <Link className="btn btn-primary" style={{ position: 'relative' }} to="/dashboard">Go Back</Link>
       </form>
     </Fragment>
   );

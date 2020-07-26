@@ -15,7 +15,7 @@ const Education = ({ education, deleteEducation }) => {
         <Moment format='YYYY/MM/DD'>{edu.from}</Moment> - {edu.to === null ? ('Now') : (<Moment format='YYYY/MM/DD'>{edu.from}</Moment>)
         }
       </td>
-      <td><button onClick={() => deleteEducation(edu._id)} className='btn btn-danger'>Delete</button></td>
+      <td><button onClick={() => deleteEducation(edu._id)} className='btn btn-danger' style={{ position: 'relative' }}>Delete</button></td>
     </tr>
 
   ));

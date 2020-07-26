@@ -17,14 +17,14 @@ const Landing = ({ isAuthenticated }) => {
 
       <div className="dark-overlay">
         <div className="landing-inner">
-          <h1 className="x-large"><i className="far fa-user-circle"></i>CIRCLE</h1>
-          <p className="lead">
-            The Internet's Private Social Media Platform
+          <h1 className="x-large" style={{ position: 'relative' }}><i className="far fa-user-circle"></i>CIRCLE</h1>
+          <p className="lead" style={{ position: 'relative' }}>
+            The Internet's Private Social Media Site
           </p>
           <br />
           <div className="buttons">
-            <Link to="/register" className="btn btn-primary">Sign Up</Link>
-            <Link to="/login" className="btn btn-light">Login</Link>
+            <Link to="/register" className="btn btn-primary" style={{ position: 'relative', margin: '10px' }} >Sign Up</Link>
+            <Link to="/login" className="btn btn-light" style={{ position: 'relative' }}>Login</Link>
           </div>
         </div>
       </div>

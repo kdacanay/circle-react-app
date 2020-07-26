@@ -26,11 +26,10 @@ const AddExperience = ({ addExperience, history }) => {
   return (
     <Fragment>
       <h1 className="large text-primary">
-        Add An Experience
+        Add Your Work Experience
       </h1>
       <p className="lead">
-        <i className="fas fa-code-branch"></i> Add any developer/programming
-        positions that you have had in the past
+        <i className="fas fa-code-branch"></i> Add Your Work Experience
       </p>
       <small>* = required field</small>
       <form className="form" onSubmit={e => {
@@ -70,7 +69,7 @@ const AddExperience = ({ addExperience, history }) => {
             value={description} onChange={e => onChange(e)}
           ></textarea>
         </div>
-        <input type="submit" className="btn btn-primary my-1" />
+        <div type="submit" style={{ position: 'relative' }} className="btn btn-primary my-1">Submit</div>
         <a className="btn btn-light my-1" href="dashboard.html">Go Back</a>
       </form>
     </Fragment>

@@ -42,27 +42,30 @@ const GroupItem = ({
               <Moment format='YYYY/MM/DD'>{date}</Moment>{' '}by {name}
             </p>
 
-            <button
+            <div
               onClick={() => addMember(groupId)}
               type="button"
               className="btn btn-primary"
+              style={{ position: 'relative' }}
             > Join This Group{' '}
               <i className="fas fa-user-plus"></i>
-            </button>
+            </div>
             <Link
               to='/posts'
               type="button"
               className="btn btn-primary"
+              style={{ position: 'relative' }}
             > Discussion{' '}
             </Link>
             {!auth.loading && user === auth.user._id && (
-              <button
+              <div
                 onClick={() => deleteGroup(_id)}
                 type='button'
                 className='btn btn-danger'
-              >
+                style={{ position: 'relative' }}
+              > Delete
                 <i className='fas fa-times' />
-              </button>
+              </div>
             )}
           </Fragment>
         )}

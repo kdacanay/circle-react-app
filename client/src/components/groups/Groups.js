@@ -26,9 +26,9 @@ const Groups = ({ getGroups, groupId, group: { groups, loading } }) => {
       <h1 className="large text-primary"><i className="fas fa-users"></i>{' '}Groups</h1>
       <p className="lead">
         Join a Group or{' '}
-        <Link to='/groups/#creategroup' className='btn btn-primary'>{' '}Create Your Own</Link>
+        <Link to='/groups/#creategroup' className='btn btn-primary' style={{ position: 'relative' }}>{' '}Create Your Own</Link>
      or{' '}
-        <Link to='/groups/#inviteemail' className='btn btn-primary'>{' '}
+        <Link to='/groups/#inviteemail' className='btn btn-primary' style={{ position: 'relative' }}>{' '}
         Invite Your Friends or Family!
       </Link>
       </p>

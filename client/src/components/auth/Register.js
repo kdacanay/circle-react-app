@@ -82,7 +82,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={e => onChange(e)}
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
+        <input type="submit" className="btn btn-primary" value="Register" style={{ position: 'relative' }} />
       </form>
       <p className="my-1">
         Already have an account? <Link to="/login">Sign In</Link>

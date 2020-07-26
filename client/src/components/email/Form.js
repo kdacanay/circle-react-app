@@ -79,17 +79,19 @@ export default class extends React.Component {
             style={{ width: '100%', height: '150px' }}
           />
         </div>
-        <input
+        <div
           type="submit" value="Submit"
           className="btn btn-primary"
           onClick={this.handleSubmit}
-        />
-        <input
+          style={{ position: 'relative' }}
+        >Submit</div>
+        <div
           type='reset'
           defaultValue='Reset'
           className='btn btn-primary'
           onClick={this.handleReset}
-        />
+          style={{ position: 'relative' }}
+        >Reset</div>
       </form>
     );
   }
