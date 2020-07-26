@@ -11,11 +11,10 @@ import { deleteGroup, addMember } from '../../actions/group';
 
 const GroupItem = ({
   auth,
-  user,
   groupId,
   addMember,
   deleteGroup,
-  group: { _id, title, name, members, date },
+  group: { _id, title, name, members, date, user },
   showActions
 }) => (
 
