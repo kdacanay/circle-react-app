@@ -21,6 +21,7 @@ const Landing = ({ isAuthenticated }) => {
           <p className="lead">
             The Internet's Private Social Media Platform
           </p>
+          <br />
           <div className="buttons">
             <Link to="/register" className="btn btn-primary">Sign Up</Link>
             <Link to="/login" className="btn btn-light">Login</Link>
