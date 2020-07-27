@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import $ from 'jquery';
-import Card from 'react-bootstrap/Card';
+import { Card } from 'react-bootstrap';
 // import PhotoDisplay from './PhotoDisplay';
 
 
