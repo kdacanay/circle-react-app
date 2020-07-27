@@ -428,9 +428,9 @@ button {
 }
 
 .navbar a:hover {
-  color: var(--primary-color);
-  text-shadow: -0.5px -0.5px 0 #343a40, 0.5px -0.5px 0 #343a40,
-    -0.5px 0.5px 0 #343a40, 0.5px 0.5px 0 #343a40;
+  color: var(--dark-color);
+  text-shadow: -0.5px -0.5px 0 #b4d263, 0.5px -0.5px 0 #b4d263,
+    -0.5px 0.5px 0 #b4d263, 0.5px 0.5px 0 #b4d263;
 }
 
 .navbar .welcome span {

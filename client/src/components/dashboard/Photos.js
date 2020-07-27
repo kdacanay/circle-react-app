@@ -102,13 +102,15 @@ class Photos extends Component {
         </div>
         <div className='container' id='image-table'>
           <table>
-            <tr>
-              <td><img style={{ width: '225px', height: '200px', margin: '3px' }} className='responsive-img' alt='new' src='https://circlereactapp.s3.us-east-2.amazonaws.com/IMG_0015-1595643813379.jpg' />
-              </td>
-              <td>
-                <img style={{ width: '225px', height: '200px', margin: '3px' }} alt='new' src='https://circlereactapp.s3.us-east-2.amazonaws.com/IMG_0047%281%29-1595689980850.JPG' />
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td><img style={{ width: '225px', height: '200px', margin: '3px' }} className='responsive-img' alt='new' src='https://circlereactapp.s3.us-east-2.amazonaws.com/IMG_0015-1595643813379.jpg' />
+                </td>
+                <td>
+                  <img style={{ width: '225px', height: '200px', margin: '3px' }} alt='new' src='https://circlereactapp.s3.us-east-2.amazonaws.com/IMG_0047%281%29-1595689980850.JPG' />
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div >

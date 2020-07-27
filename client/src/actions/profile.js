@@ -7,7 +7,7 @@ import {
   PROFILE_ERROR,
   UPDATE_PROFILE,
   CLEAR_PROFILE,
-  ACCOUNT_DELETED,
+  ACCOUNT_DELETED
 } from './types';
 
 // import { set } from 'mongoose';
@@ -265,6 +265,4 @@ export const deleteAccount = () => async dispatch => {
       });
     }
   }
-
-
 };
