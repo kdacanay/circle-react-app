@@ -174,15 +174,15 @@ router.delete('/', auth, async (req, res) => {
 //private
 
 router.put('/experience', [auth, [
-  check('title', 'Title is required')
-    .not()
-    .isEmpty(),
-  check('company', 'Company is required')
-    .not()
-    .isEmpty(),
-  check('from', 'From date is required')
-    .not()
-    .isEmpty(),
+  // check('title', 'Title is required')
+  //   .not()
+  //   .isEmpty(),
+  // check('company', 'Company is required')
+  //   .not()
+  //   .isEmpty(),
+  // check('from', 'From date is required')
+  //   .not()
+  //   .isEmpty(),
 ]
 ], async (req, res) => {
   const errors = validationResult(req);
@@ -255,18 +255,18 @@ router.delete('/experience/:exp_id', auth, async (req, res) => {
 //private
 
 router.put('/education', [auth, [
-  check('school', 'School is required')
-    .not()
-    .isEmpty(),
-  check('degree', 'Degree is required')
-    .not()
-    .isEmpty(),
-  check('fieldofstudy', 'Field of Study is required')
-    .not()
-    .isEmpty(),
-  check('from', 'From date is required')
-    .not()
-    .isEmpty(),
+  // check('school', 'School is required')
+  //   .not()
+  //   .isEmpty(),
+  // check('degree', 'Degree is required')
+  //   .not()
+  //   .isEmpty(),
+  // check('fieldofstudy', 'Field of Study is required')
+  //   .not()
+  //   .isEmpty(),
+  // check('from', 'From date is required')
+  //   .not()
+  //   .isEmpty(),
 ]
 ], async (req, res) => {
   const errors = validationResult(req);
@@ -315,7 +315,7 @@ router.put('/education', [auth, [
 //delete profile education
 //private
 
-router.delete('/education/:exp_id', auth, async (req, res) => {
+router.delete('/education/:edu_id', auth, async (req, res) => {
   try {
     const profile = await Profile.findOne({ user: req.user.id });
     //get remove index

@@ -117,9 +117,9 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
         </div>
 
         <div className="my-2">
-          <Link onClick={() => toggleSocialInputs(!displaySocialInputs)} type="button" className="btn btn-primary" style={{ position: 'relative' }}>
+          <div onClick={() => toggleSocialInputs(!displaySocialInputs)} type="button" className="btn btn-primary" style={{ position: 'relative' }}>
             Add Social Network Links
-          </Link>
+          </div>
           <span style={{ position: 'absolute' }}>Optional</span>
         </div>
 
@@ -155,7 +155,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
         <div type="submit" className="btn btn-primary" style={{ position: 'relative' }}>Submit</div>
         <Link className="btn btn-primary" style={{ position: 'relative' }} to="/dashboard">Go Back</Link>
       </form>
-    </Fragment>
+    </Fragment >
   );
 };
 

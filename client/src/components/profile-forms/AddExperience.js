@@ -69,7 +69,7 @@ const AddExperience = ({ addExperience, history }) => {
             value={description} onChange={e => onChange(e)}
           ></textarea>
         </div>
-        <div type="submit" style={{ position: 'relative' }} className="btn btn-primary my-1">Submit</div>
+        <button type="submit" style={{ position: 'relative' }} className="btn btn-primary my-1">Submit</button>
         <a className="btn btn-light my-1" href="dashboard.html">Go Back</a>
       </form>
     </Fragment>
