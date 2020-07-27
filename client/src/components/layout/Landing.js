@@ -19,7 +19,7 @@ const Landing = ({ isAuthenticated }) => {
         <div className="landing-inner">
           <h1 className="x-large" style={{ position: 'relative' }}><i className="far fa-user-circle"></i>CIRCLE</h1>
           <p className="lead" style={{ position: 'relative' }}>
-            The Internet's Private Social Media Site
+            The Internet's Private Social Networking Site
           </p>
           <br />
           <div className="buttons">
